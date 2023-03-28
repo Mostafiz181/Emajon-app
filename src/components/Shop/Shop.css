@@ -1,0 +1,30 @@
+.shop-container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.shop-container .cart-item{
+    padding-left: 100px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 45px;
+    margin-top: 10px;
+    width: 300px;
+   
+}
+
+.shop-container .cart-item img{
+    width: 100%;
+    height: 286px;
+    border-radius: 8px;
+   
+
+}
+
+.shop-container .shop-details{
+    padding-right: 100px;
+}
+
+/* .shop-container .shop-details{
+    background-color: ;
+} */
