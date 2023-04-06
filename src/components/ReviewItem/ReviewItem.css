@@ -1,0 +1,14 @@
+.review-container{
+    width: 570px;
+    height: 107px;
+    border: 2px solid green;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.review-container img{
+    width: 91px;
+    height: 91px;
+    border-radius: 8px;
+}
