@@ -12,3 +12,26 @@
 .cart p{
     font-size: 17px;
 }
+
+.clear-btn{
+    border: 0;
+    width: 100%;
+    background-color: #FF3030;
+    height: 50px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+.btn-review{
+    border: 0;
+    width: 100%;
+    background-color: #FF9900;
+    height: 50px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}

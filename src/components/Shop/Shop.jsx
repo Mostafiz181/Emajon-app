@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { addToDb, getShoppingCart } from '../../../utilities/fakedb';
+import { addToDb, deleteShoppingCart, getShoppingCart } from '../../../utilities/fakedb';
 import Cart from '../Carts/Cart';
 import Product from '../Product/Product';
 import './Shop.css'
@@ -12,7 +12,7 @@ const Shop = () => {
 
 
     useEffect(()=>{
-        fetch('https://raw.githubusercontent.com/ProgrammingHero1/ema-john-resources/main/fakeData/products.json')
+        fetch('products.json')
         .then(res=>res.json())
         .then(data=>setProducts(data))
 
@@ -35,7 +35,6 @@ const Shop = () => {
 
             }
 
-            // console.log( 'saveProduct',saveProduct)
         }
         setCart(saveCart)
 
@@ -80,6 +79,11 @@ const Shop = () => {
         
     }
 
+    const handleClearCart = ()=>{
+        setCart([]);
+        deleteShoppingCart()
+    }
+
     return (
         <div className='shop-container'>
             <div className='cart-item'>
@@ -100,7 +104,10 @@ const Shop = () => {
 
             <div className='shop-details'>
 
-                <Cart cart = {cart}></Cart>
+                <Cart 
+                cart = {cart}
+                handleClearCart={handleClearCart}
+                ></Cart>
 
 
  
